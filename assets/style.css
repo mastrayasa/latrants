@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
 .card{
     padding: 10px;
     margin-top: 10px;
@@ -11,5 +13,13 @@
     object-position: center;
 }
 .container{
+    font-family: 'Noto Sans JP', sans-serif;
     margin-top: 20px;
+    
+}
+strong{
+    text-align: center;
+}
+p{
+    text-align: center;
 }
