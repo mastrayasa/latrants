@@ -52,18 +52,21 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="card-group mt-2">
+      <div class="row  mt-2">
+      <div class="card-group">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tujuan Perjalanan</h5>
           <div class="mb-3 row">
-            <label for="staticAwal" class="col-sm-3 col-form-label">Kota Asal</label>
+            <label for="staticAwal" class="col-sm-3 col-form-label">Asal</label>
             <div class="col-sm-9">
-              <input type="text" readonly class="form-control-plaintext" id="staticKota" value="Palu">
+              <select class="form-select" aria-label="Disabled select example" disabled>
+                <option selected>Palu</option>
+              </select>
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="kotaTujuan" class="col-sm-3 col-form-label">Kota Tujuan</label>
+            <label for="kotaTujuan" class="col-sm-3 col-form-label">Tujuan</label>
             <div class="col-sm-9">
               <select class="form-select" aria-label="Default select example">
                 <option selected>Pilih Kota Tujuan</option>
@@ -78,7 +81,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tanggal Perjalanan</h5>
-          <div class="mb-3 row">
+          <div class="mb-3 m-2 row">
               <input type="date" class="form-control" id="tanggal">
           </div>
         </div>
@@ -94,8 +97,8 @@
         </div>
       </div>
     </div>
-    
-    <div class="row d-flex text-center mt-3">
+  </div>
+    <div class="row d-flex text-center mt-5 mb-5">
         <div class="col-md-4">
           <h3>PENDAFTARAN YANG MUDAH DAN CEPAT</h3>
           <p>
@@ -117,7 +120,7 @@
     </div>
   </div>
     </main>
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto">
       <div style="background-color: #18002e;">
         <div class="container">
       <div class="row align-content-center">
