@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-.services h5, h2, h3{
+.services h5, h2, h3, h4{
     font-family: 'Arvo', serif;
 }
 .d-block{
@@ -7,4 +7,8 @@
     max-height: 500px;
     object-fit: cover;
     object-position: center;
+}
+
+li{
+    margin-bottom: 8px;
 }
