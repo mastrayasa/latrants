@@ -71,14 +71,10 @@
           <h5 class="card-title">1. Tujuan Perjalanan</h5>
           <div class="mb-3">
             <label for="staticAwal" class="col-form-label">Kota Asal</label>
-           
             <select class="form-select" aria-label="Default select example">
                 <option selected>Pilih Kota</option>
-                <option value="1">Toli-Toli</option>
-                <option value="2">Buol</option>
-                <option value="3">Parigi</option>
+                <option value="1">Palu</option>
               </select>
-           
           </div>
           <div class="mb-3">
             <label for="kotaTujuan" class="col-form-label">Kota Tujuan</label> 
@@ -98,7 +94,7 @@
         <div class="card-body">
           <h5 class="card-title">2. Tanggal Perjalanan</h5>
           <div class="mb-3">
-              <input type="date" class="form-control" id="tanggal">
+              <input type="date" class="form-control datepicker" id="tanggal" name="date" autocomplete="off">
           </div>
         </div>
       </div>
@@ -107,68 +103,102 @@
         <div class="card-body">
           <h5 class="card-title">3. Jumlah Penumpang</h5>
           <div class="input-group mb-3">
-            <input type="number" class="form-control" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2">
+            <input type="number" class="form-control" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2" max="5">
             <span class="input-group-text" id="basic-addon2">Orang</span>
           </div>
           <div class="d-grid gap-2">
-            <button type="button" class="btn btn-success">Cari Tiket</button>
+            <button type="button" class="btn btn-success">Pesan Tiket</button>
             </div>
         </div>
       </div>
     </div>
 
-  <section class="services">
-    <div class="row text-center">
-      <div class="col-md-6">
-        <h5>PENDAFTARAN YANG MUDAH DAN CEPAT</h5>
-        <p>
-          Proses pemesanan tiket online antar perwakilan, dan didukung oleh pemesanan melalui website Latrants.
-        </p>
+  <section class="services mx-auto px-4 text-center">
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <div class="row">
+          <div class="col-sm-2 py-3 align-middle mx-auto">
+            <img src="assets/img/4172169_edit_info_information_note_notes_icon.png">
+          </div>
+          <h5>PENDAFTARAN YANG MUDAH DAN CEPAT</h5>
+          <p>
+            Proses pemesanan tiket online antar perwakilan, dan didukung oleh pemesanan melalui website Latrants.
+          </p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h5>ARMADA BUS BARU DAN TERBAIK</h5>
-        <p>
-          Dukungan perusahaan ternama dan terbaik di dunia, Scania dan Mercedes Benz menjadikan armada LaTrants menjadi yang terbaik.
-        </p>
+
+      <div class="col-md-6 px-5">
+        <div class="row">
+          <div class="col-sm-2 py-3 align-middle mx-auto">
+            <img src="assets/img/134180_bus_icon.png">
+          </div>
+          <h5>ARMADA BUS BARU DAN TERBAIK</h5>
+          <p>
+            Dukungan perusahaan ternama dan terbaik di dunia, Scania dan Mercedes Benz menjadikan armada LaTrants menjadi yang terbaik.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="row text-center">
-      <div class="col-md-6">
-        <h5>DUKUNGAN INFORMASI YANG BAIK DAN RAMAH</h5>
-        <p>
-          Ketersediaan informasi di website dan pelayanan yang ramah setiap perwakilan Borlindo akan semakin memudahkan anda.
-        </p>
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <div class="row">
+          <div class="col-sm-2 py-3 align-middle mx-auto">
+            <img src="assets/img/3709753_call_customer_relation_service_support_icon.png">
+          </div>
+          <h5>DUKUNGAN INFORMASI YANG BAIK DAN RAMAH</h5>
+          <p>
+            Ketersediaan informasi di website dan pelayanan yang ramah setiap perwakilan Borlindo akan semakin memudahkan anda.
+          </p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h5>TEPAT WAKTU MENJADI KOMITMEN KAMI</h5>
-        <p>
-          Berangkat dan tiba di kota tujuan dengan tepat waktu menjadi perhatian kami, agar aktivitas anda di hari yang baru tidak terganggu.
-        </p>
+      <div class="col-md-6 px-5">
+        <div class="row">
+          <div class="col-sm-2 py-3 align-middle mx-auto">
+            <img src="assets/img/392529_alarm_alert_clock_event_history_icon.png">
+          </div>
+          <h5>TEPAT WAKTU MENJADI KOMITMEN KAMI</h5>
+          <p>
+            Berangkat dan tiba di kota tujuan dengan tepat waktu menjadi perhatian kami, agar aktivitas anda di hari yang baru tidak terganggu.
+          </p>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="text-center py-4 mx-auto">
+    <p class="text-uppercase fw-bold">Support By</p>
+    <img src="assets/img/dinas-perindag-sulteng.png" alt="disperindag">
+    <img src="assets/img/mtc.png" alt="Maleo Techno Center">
+  </div>
+
   </div>
 </main>
 
-<footer class="footer mt-auto text-center text-light" style="background-color: #18002e;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mt-5">
-        <a href="index.html">
-          <img src="assets/img/logo_latrants.png" width=200px alt="">
-        </a>
+    <footer class="footer mt-auto text-center text-light" style="background-color: #18002e;">
+      <div class="container">
+        <div class="row pt-3">
+          <a href="index.html">
+            <img src="assets/img/logo_latrants.png" height=80vh alt="">
+          </a>
+        </div>
+        <div class="row py-3">
+          <h5>Customer Support</h5>
+          <p><a href="#">081931577884</a> <br>
+            (Admin Latrants.com)</p>
+          <h6>Jl. Kartini no.41</h6>
+          <h6>Palu - Sulawesi Tengah</h6>
+        </div>
       </div>
-      <div class="col-md-6 mt-4">
-        <h4>Customer Support</h4>
-        <p><a href="#">081931577884</a> <br>
-          (Admin Latrants.com)</p>
-        <h6>Jl. Kartini no.41</h6>
-        <h6>Palu - Sulawesi Tengah</h6>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('.datepicker').datepicker({
+          dateFormat:'dd/mm/yyyy',
+          minDate:0
+        });
+      })
+    </script>
   </body>
 </html>
