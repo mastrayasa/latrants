@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <form action="post_telegram.php" method="POST">
+      <form action="" method="POST">
         <div class="card-group mb-5 bg-danger p-3 rounded">
           <div class="card">
             <div class="card-body">
@@ -105,9 +105,11 @@
                 <input type="number" class="form-control jmlPenumpang" name="jmlPenumpang" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2" min="1" max="5" value="1">
                 <span class="input-group-text" id="basic-addon2">Orang</span>
               </div>
+
               <div class="d-grid gap-2">
                 <button type="button" class="btn btn-success pesanTiket" data-bs-toggle="modal" data-bs-target="#dataPenumpang">Pesan Tiket</button>
               </div>
+
               <div class="modal fade" id="dataPenumpang" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -229,7 +231,7 @@
         <h5>Customer Support</h5>
         <p>081931577884 <br>
           (Admin Latrants.com)</p>
-        <h6>Jl. Kartini no.41 - Palu</h6>
+        <h6>Jl. Kartini No.41 - Palu</h6>
       </div>
     </div>
   </footer>

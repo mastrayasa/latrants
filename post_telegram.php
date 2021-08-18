@@ -6,24 +6,23 @@ $jmlPenumpang = $_POST['jmlPenumpang'];
 $nama = $_POST['nama'];
 $alamat = $_POST['alamat'];
 $telp = $_POST['telp'];
-$namaPenumpang = $_POST['namaPenumpang'];
+$nama2Penumpang = $_POST['namaPenumpang'];
+
+$namaPenumpang = implode(", ", $nama2Penumpang);
 
 $token_bot = '1998214456:AAGk5MBPPmxegrAs6o7hTluUr9MNS8XJU7I';
 $chat_id = '253479908';
 
 $message =
-    "Kota Asal : " .  $asal  .
-    ", Kota Tujuan : " . $tujuan .
-    ", Tanggal Perjalanan : " . $date .
-    ", Jumlah Penumpang : " . $jmlPenumpang .
-    ", Nama Pemesan : " . $nama .
-    ", Alamat : " . $alamat .
-    ", No. Telp : " . $telp .
-    ", Nama Penumpang : " . $namaPenumpang;
+    "Nama : " . $nama .
+    "\nAlamat : " . $alamat .
+    "\nNo. Telp : " . $telp .
+    "\nPerjalanan :" .  $asal . " -> " . $tujuan .
+    "\nTanggal : " . $date .
+    "\nJumlah Penumpang : " . $jmlPenumpang . " Orang" .
+    "\nPenumpang : " . $namaPenumpang;
 
-$url = 'https://api.telegram.org/bot' . $token_bot . '/sendMessage?chat_id=' . $chat_id . '&text=' . $message . '&parse_mode=HTML';
-
-
+$url = 'https://api.telegram.org/bot' . $token_bot . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message) . '&parse_mode=HTML';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
