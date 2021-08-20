@@ -22,7 +22,7 @@ $message =
     "\nJumlah Penumpang : " . $jmlPenumpang . " Orang" .
     "\nPenumpang : " . $namaPenumpang;
 
-$url = 'https://api.telegram.org/bot' . urlencode($token_bot) . '/sendMessage?chat_id=' . urlencode($chat_id)  . '&text=' . urlencode($message) . '&parse_mode=HTML';
+$url = 'https://api.telegram.org/bot' . urlencode($token_bot) . '/sendMessage?chat_id=' . urlencode($chat_id)  . '&text=' . urlencode($message);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);

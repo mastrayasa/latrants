@@ -7,7 +7,7 @@ $(function(){
     for (let i = 1; i <= $(".jmlPenumpang").val() ; i++) {
       $(".data-penumpang").append(`
         <div class="form-floating mt-2">
-          <input type="text" class="form-control" id="floatingNama" name="namaPenumpang[]" placeholder="Nama Penumpang" required>
+          <input type="text" class="form-control namaPenumpang" id="floatingNama" name="namaPenumpang[]" placeholder="Nama Penumpang" required>
           <label for="floatingNama" >Nama Penumpang `+i+`</label>
         </div>`);
     }
@@ -16,25 +16,28 @@ $(function(){
   //Send ke Telegram Bot
   $('form').submit(function(e) {
     e.preventDefault();
-
     $.ajax({
       url: 'post_telegram.php',
       method: 'POST',
       data: $("form").serialize(),
+      beforeSend: function() {
+        $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', true);
+        $(".batal, .submit").hide();
+        $(".loading").show();
+      },
       success: function() {
-        alert('Tiket anda telah dipesan!');
+        $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', false);
+        $(".loading").hide();
+        $(".batal, .submit").show();
       }
     });
   });
 
   //DropDown Kota Tujuan
   let dropdown = $('.tujuan');
-
   dropdown.empty();
-
   dropdown.append('<option selected disabled>Pilih Kota</option>');
   dropdown.prop('selectedIndex', 0);
-
   const url = 'assets/latrants.json';
 
   $.getJSON(url, function (data) {
