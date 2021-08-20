@@ -17,12 +17,12 @@ $message =
     "Nama : " . $nama .
     "\nAlamat : " . $alamat .
     "\nNo. Telp : " . $telp .
-    "\nPerjalanan :" .  $asal . " -> " . $tujuan .
+    "\nPerjalanan : " .  $asal . " -> " . $tujuan .
     "\nTanggal : " . $date .
     "\nJumlah Penumpang : " . $jmlPenumpang . " Orang" .
     "\nPenumpang : " . $namaPenumpang;
 
-$url = 'https://api.telegram.org/bot' . $token_bot . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message) . '&parse_mode=HTML';
+$url = 'https://api.telegram.org/bot' . urlencode($token_bot) . '/sendMessage?chat_id=' . urlencode($chat_id)  . '&text=' . urlencode($message) . '&parse_mode=HTML';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
