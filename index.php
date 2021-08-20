@@ -71,18 +71,15 @@
               <h5 class="card-title">1. Tujuan Perjalanan</h5>
               <div class="mb-3">
                 <label for="staticAwal" class="col-form-label">Kota Asal</label>
-                <select class="form-select asal" aria-label="Default select example" name="asal">
+                <select class="form-select asal" aria-label="Default select example" name="asal" required>
                   <option selected disabled value="">Pilih Kota</option>
                   <option value="Palu">Palu</option>
                 </select>
               </div>
               <div class="mb-3">
                 <label for="kotaTujuan" class="col-form-label">Kota Tujuan</label>
-                <select class="form-select tujuan" aria-label="Default select example" name="tujuan">
-                  <option selected disabled value="">Pilih Kota</option>
-                  <option value="Toli-Toli">Toli-Toli</option>
-                  <option value="Buol">Buol</option>
-                  <option value="Parigi">Parigi</option>
+                <select class="form-select tujuan" aria-label="Default select example" name="tujuan" required>
+
                 </select>
 
               </div>
@@ -93,7 +90,7 @@
             <div class="card-body">
               <h5 class="card-title">2. Tanggal Perjalanan</h5>
               <div class="mb-3">
-                <input type="date" class="form-control tanggal" min="<?php echo date('Y-m-d'); ?>" name="tanggal" value="<?php echo date('Y-m-d'); ?>">
+                <input type="date" class="form-control tanggal" min="<?php echo date('Y-m-d'); ?>" name="tanggal" value="<?php echo date('Y-m-d'); ?>" required>
               </div>
             </div>
           </div>
@@ -102,7 +99,7 @@
             <div class="card-body">
               <h5 class="card-title">3. Jumlah Penumpang</h5>
               <div class="input-group mb-3">
-                <input type="number" class="form-control jmlPenumpang" name="jmlPenumpang" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2" min="1" max="5" value="1">
+                <input type="number" class="form-control jmlPenumpang" name="jmlPenumpang" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2" min="1" max="5" value="1" required>
                 <span class="input-group-text" id="basic-addon2">Orang</span>
               </div>
 
@@ -120,17 +117,17 @@
 
                     <div class="modal-body">
                       <div class="form-floating">
-                        <input type="text" class="form-control nama" name="nama" id="floatingNama" placeholder="Nama Lengkap">
+                        <input type="text" class="form-control nama" name="nama" id="floatingNama" placeholder="Nama Lengkap" required>
                         <label for="floatingNama">Nama Lengkap</label>
                       </div>
 
                       <div class="form-floating mt-2">
-                        <input type="text" class="form-control alamat" name="alamat" id="floatingAlamat" placeholder="Alamat">
+                        <input type="text" class="form-control alamat" name="alamat" id="floatingAlamat" placeholder="Alamat" required>
                         <label for="floatingAlamat">Alamat</label>
                       </div>
 
                       <div class="form-floating mt-2">
-                        <input type="text" class="form-control telp" name="telp" id="floatingAlamat" placeholder="No. Telp">
+                        <input type="text" class="form-control telp" name="telp" id="floatingAlamat" placeholder="No. Telp" required>
                         <label for="floatingNoTelp">No. Telp</label>
                       </div>
                       <br>
