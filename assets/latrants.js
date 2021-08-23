@@ -13,7 +13,7 @@ $(function(){
     }
   });
 
-  //Send ke Telegram Bot
+  //Send ke Telegram Bot & loading process
   $('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -29,6 +29,9 @@ $(function(){
         $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', false);
         $(".loading").hide();
         $(".batal, .submit").show();
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        alert("Terjadi kesalahan");
       }
     });
   });

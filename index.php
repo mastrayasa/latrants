@@ -142,6 +142,7 @@
                       <button type="button" class="btn btn-secondary batal" data-bs-dismiss="modal">Batal</button>
 
                       <button type="submit" class="btn btn-primary submit">Submit</button>
+                      
                       <div class="spinner-border loading" role="status" style="display:none">
                         <span class="visually-hidden">Loading...</span>
                       </div>
