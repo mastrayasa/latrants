@@ -1,41 +1,51 @@
-$(document).ready(function(){
-    var datap = `
-    <div class="form-floating">
-        <input type="text" class="form-control" id="floatingNama" placeholder="Nama Penumpang">
-        <label for="floatingNama">Nama Penumpang</label>
-    </div>
-    `
+//Jquery
+$(function(){
+  //Looping Input nama penumpang sesuai jumlah penumpang
+  $(".pesanTiket").click(function(){
+    $(".data-penumpang").html("");
 
-    $(".pesanTiket").click(function(){
-        $(".data-penumpang").html("");
-        if ($("#jmlPenumpang").val() == 1){
-            $(".data-penumpang").append(datap);
-        } 
-        
-        if ($("#jmlPenumpang").val() == 2){
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap);
-        } 
-        
-        if ($("#jmlPenumpang").val() == 3){
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap);
-        } 
+    for (let i = 1; i <= $(".jmlPenumpang").val() ; i++) {
+      $(".data-penumpang").append(`
+        <div class="form-floating mt-2">
+          <input type="text" class="form-control namaPenumpang" id="floatingNama" name="namaPenumpang[]" placeholder="Nama Penumpang" required>
+          <label for="floatingNama" >Nama Penumpang `+i+`</label>
+        </div>`);
+    }
+  });
 
-        if ($("#jmlPenumpang").val() == 4){
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap);
-        }
-
-        if ($("#jmlPenumpang").val() == 5){
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap + "<br>");
-            $(".data-penumpang").append(datap);
-        }
+  //Send ke Telegram Bot & loading process
+  $('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'post_telegram.php',
+      method: 'POST',
+      data: $("form").serialize(),
+      beforeSend: function() {
+        $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', true);
+        $(".batal, .submit").hide();
+        $(".loading").show();
+      },
+      success: function() {
+        $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', false);
+        $(".loading").hide();
+        $(".batal, .submit").show();
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        alert("Terjadi kesalahan");
+      }
     });
+  });
+
+  //DropDown Kota Tujuan
+  let dropdown = $('.tujuan');
+  dropdown.empty();
+  dropdown.append('<option selected disabled>Pilih Kota</option>');
+  dropdown.prop('selectedIndex', 0);
+  const url = 'assets/latrants.json';
+
+  $.getJSON(url, function (data) {
+    $.each(data, function (key, entry) {
+      dropdown.append($('<option></option>').attr('value', entry.kota).text(entry.kota));
+    })
+  });
 });
