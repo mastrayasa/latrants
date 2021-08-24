@@ -72,7 +72,7 @@
               <div class="mb-3">
                 <label for="staticAwal" class="col-form-label">Kota Asal</label>
                 <select class="form-select asal" aria-label="Default select example" name="asal" required>
-                  <option selected disabled value="">Pilih Kota</option>
+                  <option selected disabled>Pilih Kota</option>
                   <option value="Palu">Palu</option>
                 </select>
               </div>
@@ -107,7 +107,8 @@
                 <button type="button" class="btn btn-success pesanTiket" data-bs-toggle="modal" data-bs-target="#dataPenumpang">Pesan Tiket</button>
               </div>
 
-              <div class="modal fade" id="dataPenumpang" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <!-- Modal Form -->
+              <div class="modal fade" id="dataPenumpang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -142,13 +143,33 @@
                       <button type="button" class="btn btn-secondary batal" data-bs-dismiss="modal">Batal</button>
 
                       <button type="submit" class="btn btn-primary submit">Submit</button>
-                      
+
                       <div class="spinner-border loading" role="status" style="display:none">
                         <span class="visually-hidden">Loading...</span>
                       </div>
 
                     </div>
 
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Success -->
+              <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+
+                    </div>
+                    <div class="modal-body text-center">
+                      <img src="assets/img/3855625_correct_success_tick_icon.png" class="py-3">
+
+                      <p>Data anda telah terkirim.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary tutupSukses" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
