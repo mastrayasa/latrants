@@ -29,6 +29,7 @@ $(function(){
         $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', false);
         $(".batal, .submit").show();
         $(".loading").hide();
+        $("#dataPenumpang").modal('hide');
         $("#modalSuccess").modal('show');
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {

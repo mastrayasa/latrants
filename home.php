@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #240046;">
       <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="home">
           <img src="assets/img/logo latrants.png" width=200px alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +25,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-            <a class="nav-link" href="about_us.html">Tentang Kami</a>
-            <a class="nav-link" href="s&k.html">Syarat & Ketentuan</a>
-            <a class="nav-link" href="contact.html">Kontak</a>
+            <a class="nav-link active" aria-current="page" href="home">Home</a>
+            <a class="nav-link" href="about_us">Tentang Kami</a>
+            <a class="nav-link" href="s&k">Syarat & Ketentuan</a>
+            <a class="nav-link" href="contact">Kontak</a>
           </div>
         </div>
       </div>
@@ -40,10 +40,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/FVBBK6uIy1.jpg" class="d-block w-100" alt="...">
+          <img src="assets/img/annie-spratt-tG822f1XzT4-unsplash.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/JEGkGqiZy8.jpg" class="d-block w-100" alt="...">
+          <img src="assets/img/ash-gerlach-6fF-Ojxov6o-unsplash.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -99,8 +99,13 @@
             <div class="card-body">
               <h5 class="card-title">3. Jumlah Penumpang</h5>
               <div class="input-group mb-3">
-                <input type="number" class="form-control jmlPenumpang" name="jmlPenumpang" placeholder="Jumlah Penumpang" aria-label="Jumlah Penumpang" aria-describedby="basic-addon2" min="1" max="5" value="1" required>
-                <span class="input-group-text" id="basic-addon2">Orang</span>
+                <select class="form-select jmlPenumpang" aria-label="Default select example">
+                  <option selected value="1">1 Orang</option>
+                  <option value="2">2 Orang</option>
+                  <option value="3">3 Orang</option>
+                  <option value="4">4 Orang</option>
+                  <option value="5">5 Orang</option>
+                </select>
               </div>
 
               <div class="d-grid gap-2">
@@ -128,7 +133,7 @@
                       </div>
 
                       <div class="form-floating mt-2">
-                        <input type="text" class="form-control telp" name="telp" id="floatingAlamat" placeholder="No. Telp" required>
+                        <input type="tel" class="form-control telp" name="telp" id="floatingAlamat" placeholder="No. Telp" required>
                         <label for="floatingNoTelp">No. Telp</label>
                       </div>
                       <br>
@@ -247,7 +252,7 @@
   <footer class="footer mt-auto text-center text-light" style="background-color: #18002e;">
     <div class="container">
       <div class="row pt-3">
-        <a href="index.php">
+        <a href="home">
           <img src="assets/img/logo_latrants.png" height=80vh alt="">
         </a>
       </div>
