@@ -13,7 +13,7 @@ $(function(){
     }
   });
 
-  //Send ke Telegram Bot & loading process
+  //Send ke Telegram Bot, loading process, success modal
   $('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -27,8 +27,10 @@ $(function(){
       },
       success: function() {
         $(".nama, .alamat, .telp, .namaPenumpang").prop('disabled', false);
-        $(".loading").hide();
         $(".batal, .submit").show();
+        $(".loading").hide();
+        $("#dataPenumpang").modal('hide');
+        $("#modalSuccess").modal('show');
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         alert("Terjadi kesalahan");
@@ -47,5 +49,10 @@ $(function(){
     $.each(data, function (key, entry) {
       dropdown.append($('<option></option>').attr('value', entry.kota).text(entry.kota));
     })
+  });
+
+  //Reload after success
+  $(".tutupSukses").click(function(){
+    location.reload();
   });
 });

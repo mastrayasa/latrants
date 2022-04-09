@@ -10,8 +10,8 @@ $nama2Penumpang = $_POST['namaPenumpang'];
 
 $namaPenumpang = implode(", ", $nama2Penumpang);
 
-$token_bot = '1998214456:AAGk5MBPPmxegrAs6o7hTluUr9MNS8XJU7I';
-$chat_id = '253479908';
+$token_bot = '1998214456:AAEVyhV8Q_fVBFJbo60E8oslxoDnx0aRwR0';
+$chat_id = '-556750555';
 
 $message =
     "Nama : " . $nama .
