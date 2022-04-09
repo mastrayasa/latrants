@@ -4,7 +4,7 @@ $tujuan = $_POST['tujuan'];
 $date = $_POST['tanggal'];
 $jmlPenumpang = $_POST['jmlPenumpang'];
 $nama = $_POST['nama'];
-$alamat = $_POST['alamat'];
+$alamat = $_POST['alamat']; 
 $telp = $_POST['telp'];
 $nama2Penumpang = $_POST['namaPenumpang'];
 
